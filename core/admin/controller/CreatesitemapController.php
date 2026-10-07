@@ -44,8 +44,8 @@ class CreatesitemapController extends BaseAdmin
 	protected $fileArr = ['jpg', 'png', 'jpeg', 'gif', 'xls', 'xlsx', 'pdf', 'mp4', 'mpeg', 'mp3', 'avi'];
 
 	protected $filterArr = [
-		'url' => ['cart'],
-		'get' => ['order', 'page']
+		'url' => ['information'],
+		'get' => ['order'],
 	];
 
 

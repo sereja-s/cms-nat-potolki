@@ -652,6 +652,7 @@ textarea.input {
 	line-height: 120.8333333333%;
 	color: #000;
 	font-weight: 700;
+	text-align: left;
 }
 
 .slider-arrows {

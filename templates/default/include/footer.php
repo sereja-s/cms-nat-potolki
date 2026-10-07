@@ -66,19 +66,18 @@
 			<div data-spollers="767,max" class="footer__menu menu-footer">
 				<div class="menu-footer__column">
 
-					<?php if (!empty($this->menu['catalog'])) : ?>
+					<?php if (!empty($this->socials)) : ?>
 
-						<button type="button" data-spoller class="menu-footer__title _footer-title">Продукция</button>
+						<button type="button" data-spoller class="menu-footer__title _footer-title">Получить консультацию</button>
 						<ul class="menu-footer__list">
 
+							<?php foreach ($this->socials as $item) : ?>
 
-
-							<?php foreach ($this->menu['catalog'] as $item) : ?>
-
-								<li><a href="<?= $this->alias(['catalog' => $item['alias']]) ?>" class="menu-footer__link"><?= $item['name'] ?></a></li>
+								<li><a href="<?= $this->alias($item['external_alias']) ?>" class="menu-footer__link"><?= $item['name'] ?></a></li>
 
 							<?php endforeach; ?>
 
+							<!-- <li><a href="" class="menu-footer__link">Instagram</a></li> -->
 
 						</ul>
 
@@ -105,18 +104,16 @@
 				</div>
 				<div class="menu-footer__column">
 
-					<?php if (!empty($this->socials)) : ?>
+					<?php if (!empty($this->menu['catalog'])) : ?>
 
-						<button type="button" data-spoller class="menu-footer__title _footer-title">Соц.сети</button>
+						<button type="button" data-spoller class="menu-footer__title _footer-title">Каталог</button>
 						<ul class="menu-footer__list">
 
-							<?php foreach ($this->socials as $item) : ?>
+							<?php foreach ($this->menu['catalog'] as $item) : ?>
 
-								<li><a href="<?= $this->alias($item['external_alias']) ?>" class="menu-footer__link"><?= $item['name'] ?></a></li>
+								<li><a href="<?= $this->alias(['catalog' => $item['alias']]) ?>" class="menu-footer__link"><?= $item['name'] ?></a></li>
 
 							<?php endforeach; ?>
-
-							<!-- <li><a href="" class="menu-footer__link">Instagram</a></li> -->
 
 						</ul>
 
